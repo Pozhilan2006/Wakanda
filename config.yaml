@@ -1,0 +1,36 @@
+camera:
+  width: 1280
+  height: 720
+  fps: 30
+
+pose:
+  model_path: assets/models/pose_landmarker_lite.task
+  min_pose_detection_confidence: 0.5
+  min_pose_presence_confidence: 0.5
+  min_tracking_confidence: 0.5
+
+gesture:
+  confirmation_frames: 8
+  release_frames: 8
+  cooldown_seconds: 3.0
+  confidence_threshold: 0.75
+  visibility_threshold: 0.55
+  wrist_chest_distance: 0.75
+  crossing_margin: 0.08
+  chest_vertical_min: -0.25
+  chest_vertical_max: 0.75
+  wrist_crossing_min: 0.35
+  chest_position_min: 0.20
+  elbow_angle_min: 55.0
+  elbow_angle_max: 175.0
+  pose_motion_limit: 1.5
+  weights:
+    wrist_crossing: 0.30
+    chest_position: 0.25
+    elbow_geometry: 0.20
+    arm_symmetry: 0.15
+    landmark_visibility: 0.10
+
+audio:
+  wakanda_file: assets/audio/wakanda_bgm.wav
+  volume: 0.75
